@@ -12,7 +12,6 @@ import { RatesList } from '../../components/RatesList/RatesList.jsx';
 import { Filter } from '../../components/Filter/Filter.jsx';
 import { Loading } from '../../components/Loading/Loading.jsx';
 import { Error } from '../../components/Error/Error.jsx';
-
 export const Rates = () => {
   const dispatch = useDispatch();
   const baseCurrency = useSelector(selectBaseCurrency);
