@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux';
-import Select from 'react-select/base';
+import Select from 'react-select';
 import options from './symbols.json';
-import { selectBaseCurrency } from '../../redux/selectors.js';
-export const SelectRates = () => {
+import { setBaseCurrency } from '../../redux/currencySlice.js';
+export const SelectRates = ({ baseCurrency }) => {
   const dispatch = useDispatch();
   const hendleChange = value => {
     console.log(value);
-    dispatch(selectBaseCurrency(value.label));
+    dispatch(setBaseCurrency(value.label));
   };
   return (
     <Select
